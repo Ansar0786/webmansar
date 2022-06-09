@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}list Form{% endblock %}
+{% block body %}
+
+<div class="main">
+
+    {% for data in dataset %}.
+
+    {{ data.moviename }}<br/>
+    {{ data.poster }}<br/>
+        <img src="/{{ BASIC_DIR }}/{{img.img}}" width="120"/><br/>
+        {{ data.releasedate }}<br/>
+        {{ data.shortdesc }}<br/>
+        {{ data.longdesc }}<br/>
+        {{ data.publishername }}<br/>
+    <hr/>
+
+    {% endfor %}
+
+</div>
+
+{% endblock %}
